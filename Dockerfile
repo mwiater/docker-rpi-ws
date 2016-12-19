@@ -73,12 +73,7 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
   && tar -xzf "node-v$NODE_VERSION-linux-armv6l.tar.gz" -C /usr/local --strip-components=1 \
   && rm "node-v$NODE_VERSION-linux-armv6l.tar.gz" SHASUMS256.txt SHASUMS256.txt.asc
 
-
-
 COPY app/* /root/
-
-RUN cd /root
-RUN ls -laF
 
 RUN cd /root \
   && ls -laF \
